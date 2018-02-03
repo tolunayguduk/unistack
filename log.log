@@ -1,0 +1,48 @@
+[2018-01-18T18:16:08.949] [INFO] messageLog - { identity: 
+   { class: undefined,
+     mesaj: 'merhaba',
+     user: 'tolunay',
+     kanal: 'bmg',
+     tarih: '18:16/4.0.2018' },
+  gcm: 
+   { multicast_id: 6209003444066494000,
+     success: 0,
+     failure: 1,
+     canonical_ids: 0,
+     results: [ [Object] ] } }
+[2018-01-18T18:16:09.075] [INFO] messageLog - { identity: 
+   { class: undefined,
+     mesaj: 'merhaba',
+     user: 'tolunay',
+     kanal: 'bmg',
+     tarih: '18:16/4.0.2018' },
+  gcm: 
+   { multicast_id: 8210458239952495000,
+     success: 0,
+     failure: 1,
+     canonical_ids: 0,
+     results: [ [Object] ] } }
+[2018-01-18T18:16:09.183] [INFO] messageLog - { identity: 
+   { class: undefined,
+     mesaj: 'merhaba',
+     user: 'tolunay',
+     kanal: 'bmg',
+     tarih: '18:16/4.0.2018' },
+  gcm: 
+   { multicast_id: 5440528751340277000,
+     success: 0,
+     failure: 1,
+     canonical_ids: 0,
+     results: [ [Object] ] } }
+[2018-01-18T18:16:09.453] [INFO] messageLog - { identity: 
+   { class: undefined,
+     mesaj: 'merhaba',
+     user: 'tolunay',
+     kanal: 'bmg',
+     tarih: '18:16/4.0.2018' },
+  gcm: 
+   { multicast_id: 8414611062494739000,
+     success: 0,
+     failure: 1,
+     canonical_ids: 0,
+     results: [ [Object] ] } }

@@ -1,0 +1,48 @@
+<html>
+<head>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+
+        var socket = io();
+        var channel = prompt("kanal adı : ");
+        var ad = prompt("adınız");
+        socket.emit("switchRoom",channel);
+        socket.emit("user", ad);
+        socket.on("connect", function () {
+           socket.on("message", function (veri) {
+               console.log(veri);
+           });
+           socket.on('typing',function (status) {
+               $('#not').text(status);
+           });
+            socket.on('stoptyping',function (status) {
+
+                $('#not').text(status).delay(90000);
+            });
+        });
+
+
+        function typing() {
+            socket.emit('typing', ad + ' typing');
+        }
+
+        function stoptyping() {
+            socket.emit('stoptyping', '');
+        }
+
+
+
+    </script>
+
+
+
+</head>
+<body>
+    <h1 style="color: blue">UNISTACK CHAT TEST</h1>
+    <input type="text" onkeydown="typing()" onkeyup="stoptyping()" id="typing">
+    <p id="not"></p>
+
+</body>
+</html>
