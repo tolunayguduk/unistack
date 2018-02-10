@@ -1,6 +1,9 @@
 var express = require('express');
 var global_variables = require('../../../global_variables');
 var db = require('../../model/db');
+var url = require('url');
+var CryptoJS = require("crypto-js");
+var randomstring = require("randomstring");
 var router = express.Router();
 
 router.get('/', function (req,res) {

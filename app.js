@@ -33,6 +33,8 @@ app.use('/chatOldMessage',chatOldMessage);
 app.get('/chat',function (req,res) {
     res.sendFile(__dirname + '/public/chat.html');
 });
+//*************************************************************************
+//*************************************************************************
 app.use('/registration',registration);
 app.get('/signup',function (req,res) {
     res.sendFile(__dirname + '/public/signup.html');
@@ -49,8 +51,9 @@ app.get('/upload',function (req,res) {
     res.sendFile(__dirname + '/public/upload.html');
 });
 app.use(function (req,res) {
-    return res.send({code: 400, message:"Sayfa mevcut değil"});
+    return res.sendFile(__dirname + '/public/error.html');
 });
+//*************************************************************************
 //*************************************************************************
 var server = app.listen(global_variables.server_port(),function () {
     console.log('... SERVER ON AIR ...');
