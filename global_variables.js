@@ -1,14 +1,10 @@
-exports.server_port = function () {
-    return 3000;
-}
+exports.server_port = function () {return 3000;}
+exports.gcm = function () {return "AIzaSyCKewtwH1SVSev5iHJmzm4MWLGevO9i6Ag";}
+exports.apiKey = function () {return null;}
+exports.db_config = {host : 'localhost', user : 'root', password : '', database : 'unistack'};
 
 
-exports.gcm = function () {
-    return "AIzaSyCKewtwH1SVSev5iHJmzm4MWLGevO9i6Ag";
-}
-exports.apiKey = function () {
-    return null;
-}
+
 const log4js = require('log4js');
 log4js.configure({
     appenders: { cheese: { type: 'file', filename: 'log.log' } },

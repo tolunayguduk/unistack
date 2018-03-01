@@ -1,12 +1,8 @@
 var mysql = require('mysql');
-var db_config = {
-    host : 'localhost',
-    user : 'root',
-    password : '',
-    database : 'unistack'
-};
+var global_variables = require('../../global_variables');
+
 var connection;
-connection = mysql.createConnection(db_config);
+connection = mysql.createConnection(global_variables.db_config);
 connection.connect(function (err) {
 if (err){
 console.log('Database connection error:',err);

@@ -98,12 +98,8 @@ io.sockets.on("connection", function (socket) {
                     "tarih" : new Date().getHours()+":"+ new Date().getMinutes() + "/" + new Date().getDay() + "." + new Date().getMonth() + "." + new Date().getFullYear()
                 }
 
-
-                gcmCloud.googleCloud(msg.message,global_variables.gcm(),veri,msg.regId,socket.channel);
-
-
-
                 socket.to(socket.rooms[socket.channel]).emit('message', veri);
+                gcmCloud.googleCloud(msg.message,global_variables.gcm(),veri,msg.regId,socket.channel);
                 //socket.emit('nowMessage', veri);
             }
         });
