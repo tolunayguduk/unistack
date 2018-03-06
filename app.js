@@ -102,7 +102,6 @@ io.sockets.on("connection", function (socket) {
                 //socket.emit('nowMessage', veri);
             }
         });
-
     });
     socket.on('typing', function (status) {
         socket.to(socket.rooms[socket.channel]).emit('typing', status);

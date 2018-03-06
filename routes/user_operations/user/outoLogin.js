@@ -4,7 +4,7 @@ var db = require('../../model/db');
 var jwt = require('jsonwebtoken');
 var router = express.Router();
 
-router.post('/', ensureToken, function (req,res) {
+router.get('/', ensureToken, function (req,res) {
     if(req.header("secure")==global_variables.apiKey()){
         jwt.verify(req.token, 'tolunayguduk', function(err, data) {
             if (err) {
