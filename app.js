@@ -97,7 +97,6 @@ io.sockets.on("connection", function (socket) {
                     "kanal" : socket.channel,
                     "tarih" : new Date().getHours()+":"+ new Date().getMinutes() + "/" + new Date().getDay() + "." + new Date().getMonth() + "." + new Date().getFullYear()
                 }
-
                 socket.to(socket.rooms[socket.channel]).emit('message', veri);
                 gcmCloud.googleCloud(msg.message,global_variables.gcm(),veri,msg.regId,socket.channel);
                 //socket.emit('nowMessage', veri);
@@ -111,6 +110,4 @@ io.sockets.on("connection", function (socket) {
     socket.on('stoptyping', function (status) {
         socket.to(socket.rooms[socket.channel]).emit('stoptyping', status);
     });
-
-
 });

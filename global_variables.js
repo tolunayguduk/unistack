@@ -1,7 +1,7 @@
 exports.server_port = function () {return 3000;}
 exports.gcm = function () {return "AIzaSyCKewtwH1SVSev5iHJmzm4MWLGevO9i6Ag";}
 exports.apiKey = function () {return null;}
-exports.db_config = {host : 'localhost', user : 'root', password : '', database : 'unistack'};
+exports.db_config = {host : '139.59.157.209', user : 'evren', password : 'Evren123...', database : 'deneme'};
 
 
 

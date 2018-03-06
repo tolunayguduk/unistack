@@ -26,9 +26,9 @@ router.post('/imageUpload', function (req,res) {
 
 });
 router.post('/changeName', function (req, res) {
-    name = req.body.name;
-    surname = req.body.surname;
-    userID = req.body.userID;
+    var name = req.body.name;
+    var surname = req.body.surname;
+    var userID = req.body.userID;
     if(req.header("secure")==global_variables.apiKey()){
         if(name != "" && surname != ""){
             db.query("UPDATE users SET name = ?, surname = ? WHERE id= ?", [name, surname, userID], function (err,data) {
