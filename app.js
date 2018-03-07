@@ -90,12 +90,25 @@ io.sockets.on("connection", function (socket) {
                 console.log(err);
             }
             else{
+
+                var saat = new Date().getHours();
+                var dakika = new Date().getMinutes();
+                if(saat < 10){
+                    saat = '0'+ saat;
+                }
+                if(dakika < 10){
+                    dakika = '0'+ dakika;
+                }
+
+
+
+
                 var veri = {
                     "class" : msg.class,
                     'mesaj' : msg.message,
                     'user' : socket.username,
                     "kanal" : socket.channel,
-                    "tarih" : new Date().getHours()+":"+ new Date().getMinutes() + "/" + new Date().getDay() + "." + new Date().getMonth() + "." + new Date().getFullYear()
+                    "tarih" : saat + ":" + dakika
                 }
                 socket.to(socket.rooms[socket.channel]).emit('message', veri);
                 gcmCloud.googleCloud(msg.message,global_variables.gcm(),veri,msg.regId,socket.channel);
